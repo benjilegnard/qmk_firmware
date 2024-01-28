@@ -21,7 +21,15 @@ enum layers {
   _DEFAULT,
   _LOWER,
   _RAISE,
-  _ADJUST
+  _ADJUST,
+  _MOUSE,
+  _NAVIGATION,
+  _SYMBOL_1,
+  _SYMBOL_2,
+  _FUNCTIONS,
+  _NUMBERS,
+  _ACCESS_1,
+  _ACCESS_2,
 };
 
 #ifdef OLED_ENABLE
@@ -192,7 +200,43 @@ static void render_logo(void) {
 }
 
 static void render_logo_text(void) {
-    oled_write_P(PSTR("corne"), false);
+    switch (get_highest_layer(layer_state | default_layer_state)) {
+        case _RAISE:
+            oled_write_P(PSTR("raise"), false);
+            break;
+        case _LOWER:
+            oled_write_P(PSTR("lower"), false);
+            break;
+        case _ADJUST:
+            oled_write_P(PSTR("adjst"), false);
+            break;
+        case _MOUSE:
+            oled_write_P(PSTR("mouse"), false);
+            break;
+        case _NAVIGATION:
+            oled_write_P(PSTR("navig"), false);
+            break;
+        case _SYMBOL_1:
+            oled_write_P(PSTR("symb1"), false);
+            break;
+        case _SYMBOL_2:
+            oled_write_P(PSTR("symb2"), false);
+            break;
+        case _FUNCTIONS:
+            oled_write_P(PSTR("funct"), false);
+            break;
+        case _NUMBERS:
+            oled_write_P(PSTR("numbr"), false);
+            break;
+        case _ACCESS_1:
+            oled_write_P(PSTR("accs1"), false);
+            break;
+        case _ACCESS_2:
+            oled_write_P(PSTR("accs2"), false);
+            break;
+        default:
+            oled_write_P(PSTR("corne"), false);
+    }
 }
 
 static void render_kb_LED_state(void) {
@@ -230,6 +274,30 @@ static void render_layer_state(void) {
             break;
         case _ADJUST:
             oled_write_P(adjust_layer, false);
+            break;
+        case _MOUSE:
+            oled_write_P(lower_layer, false);
+            break;
+        case _NAVIGATION:
+            oled_write_P(raise_layer, false);
+            break;
+        case _SYMBOL_1:
+            oled_write_P(adjust_layer, false);
+            break;
+        case _SYMBOL_2:
+            oled_write_P(adjust_layer, false);
+            break;
+        case _FUNCTIONS:
+            oled_write_P(adjust_layer, false);
+            break;
+        case _NUMBERS:
+            oled_write_P(adjust_layer, false);
+            break;
+        case _ACCESS_1:
+            oled_write_P(raise_layer, false);
+            break;
+        case _ACCESS_2:
+            oled_write_P(lower_layer, false);
             break;
         default:
             oled_write_P(default_layer, false);
