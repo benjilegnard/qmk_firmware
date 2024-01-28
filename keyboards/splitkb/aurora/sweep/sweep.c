@@ -21,12 +21,12 @@ enum layers {
   _DEFAULT,
   _MOUSE,
   _NAVIGATION,
-  _RIGHT_SYMBOLS,
-  _LEFT_SYMBOLS,
+  _SYMBOL_1,
+  _SYMBOL_2,
   _FUNCTIONS,
   _NUMBERS,
-  _ALWAYS_ON_1,
-  _ALWAYS_ON_2,
+  _ACCESS_1,
+  _ACCESS_2,
 };
 
 #ifdef OLED_ENABLE
@@ -205,10 +205,10 @@ void render_logo_text(void) {
         case _NAVIGATION:
             oled_write_P(PSTR("navig"), false);
             break;
-        case _RIGHT_SYMBOLS:
+        case _SYMBOL_1:
             oled_write_P(PSTR("symb1"), false);
             break;
-        case _LEFT_SYMBOLS:
+        case _SYMBOL_2:
             oled_write_P(PSTR("symb2"), false);
             break;
         case _FUNCTIONS:
@@ -217,10 +217,10 @@ void render_logo_text(void) {
         case _NUMBERS:
             oled_write_P(PSTR("numbr"), false);
             break;
-        case _ALWAYS_ON_1:
+        case _ACCESS_1:
             oled_write_P(PSTR("raise"), false);
             break;
-        case _ALWAYS_ON_2:
+        case _ACCESS_2:
             oled_write_P(PSTR("lower"), false);
             break;
         default:
@@ -261,10 +261,10 @@ void render_layer_state(void) {
         case _NAVIGATION:
             oled_write_P(raise_layer, false);
             break;
-        case _RIGHT_SYMBOLS:
+        case _SYMBOL_1:
             oled_write_P(adjust_layer, false);
             break;
-        case _LEFT_SYMBOLS:
+        case _SYMBOL_2:
             oled_write_P(adjust_layer, false);
             break;
         case _FUNCTIONS:
@@ -273,10 +273,10 @@ void render_layer_state(void) {
         case _NUMBERS:
             oled_write_P(adjust_layer, false);
             break;
-        case _ALWAYS_ON_1:
+        case _ACCESS_1:
             oled_write_P(raise_layer, false);
             break;
-        case _ALWAYS_ON_2:
+        case _ACCESS_2:
             oled_write_P(lower_layer, false);
             break;
         default:
