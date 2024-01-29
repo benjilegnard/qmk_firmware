@@ -12,17 +12,16 @@ enum layers {
     _SYMBOL_2 = 7,
     _FUNCTIONS = 8,
     _NUMBERS = 9,
-    _ACCESS_1 = 10, // 7 on sweep
-    _ACCESS_2 = 11,
+    _EXTRAS = 10, // 7 on swee
 };
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_DEFAULT] = LAYOUT_split_3x6_3(
-		KC_TAB , KC_A        , KC_Z                , KC_E           , KC_R              , KC_T                ,                KC_Y , KC_U              , KC_I                , KC_O             , KC_P        , KC_BSPC,
-		KC_LCTL, LCTL_T(KC_Q), LT(_FUNCTIONS, KC_S), LT(_MOUSE,KC_D), LT(_SYMBOL_1,KC_F), KC_G                ,                KC_H , LT(_SYMBOL_2,KC_J), LT(_NAVIGATION,KC_K), LT(_NUMBERS,KC_L), LCTL_T(KC_M), KC_QUOT,
-		KC_LSFT, KC_W        , LSFT_T(KC_X)        , RALT_T(KC_C)   , LGUI_T(KC_V)      , KC_B                ,                KC_N , RGUI_T(KC_SCLN)   , RALT_T(KC_COMM)     , LSFT_T(KC_DOT)   , KC_SLSH     , RSFT_T(KC_ESC),
-				                                     KC_LGUI        , MO(_LOWER)        , LT(_ACCESS_2,KC_SPC), LT(_ACCESS_1,KC_ENT), MO(_RAISE)        , KC_RALT
+		KC_TAB , KC_A        , KC_Z                , KC_E           , KC_R              , KC_T        ,               KC_Y , KC_U              , KC_I                , KC_O             , KC_P        , KC_BSPC,
+		KC_LCTL, LCTL_T(KC_Q), LT(_FUNCTIONS, KC_S), LT(_MOUSE,KC_D), LT(_SYMBOL_1,KC_F), KC_G        ,               KC_H , LT(_SYMBOL_2,KC_J), LT(_NAVIGATION,KC_K), LT(_NUMBERS,KC_L), LCTL_T(KC_M), KC_QUOT,
+		KC_LSFT, KC_W        , LSFT_T(KC_X)        , RALT_T(KC_C)   , LGUI_T(KC_V)      , KC_B        ,               KC_N , RGUI_T(KC_SCLN)   , RALT_T(KC_COMM)     , LSFT_T(KC_DOT)   , KC_SLSH     , RSFT_T(KC_ESC),
+				                                     KC_LGUI        , LT(_LOWER,KC_TAB) , KC_SPC      , LT(_EXTRAS,KC_ENT) , LT(_RAISE,KC_TAB) , KC_RALT
 	),
 	[_LOWER] = LAYOUT_split_3x6_3(
 		KC_TAB , KC_1   , KC_2   , KC_3   , KC_4   , KC_5   , 			KC_6   , KC_7       , KC_8   , KC_9    , KC_0   , KC_BSPC,
@@ -78,17 +77,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS, KC_PAST, KC_4, KC_5,    KC_6,    KC_PEQL,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,KC_TRNS,
                                 KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS
     ),
-    [_ACCESS_1] = LAYOUT_split_3x6_3(
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_COLN, KC_ESC,  KC_TRNS,      KC_TRNS     , KC_TRNS, KC_TRNS,         KC_DEL,         KC_BSPC,KC_TRNS,
-        KC_TRNS, KC_GRV,  KC_PERC, KC_SLSH, KC_ENT,  KC_TRNS,      DF(_MOUSE)  , KC_LGUI, KC_TRNS,         KC_TRNS,        KC_QUOT,KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_EXLM, KC_TRNS,      DF(_DEFAULT), KC_TRNS, RALT_T(KC_COMM), RCTL_T(KC_DOT), QK_BOOT,KC_TRNS,
-                                   KC_TRNS, KC_TRNS, KC_TAB,       KC_NO       , KC_TRNS, KC_TRNS
-    ),
-    [_ACCESS_2] = LAYOUT_split_3x6_3(
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_WH_U, KC_TRNS,
-        KC_TRNS, KC_BTN4, KC_BTN3, KC_BTN2, KC_BTN1, KC_TRNS,      KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, KC_ESC , KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_HOME, KC_PGDN, KC_PGUP, KC_END , KC_WH_D, KC_TRNS,
-                                   KC_TRNS, KC_TRNS,   KC_NO,      KC_TRNS, KC_TRNS, KC_TRNS
+    [_EXTRAS] = LAYOUT_split_3x6_3(
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_COLN, KC_ESC,  KC_TRNS,      KC_TRNS     , KC_TRNS    , KC_TRNS        , KC_TRNS       , KC_TRNS , KC_BSPC,
+        KC_TRNS, KC_GRV,  KC_PERC, KC_SLSH, KC_ENT,  KC_TRNS,      KC_LEFT     , KC_DOWN    , KC_UP          , KC_RGHT       , KC_TRNS , KC_QUOT,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_EXLM, KC_TRNS,      DF(_DEFAULT), DF(_MOUSE) , RALT_T(KC_COMM), RCTL_T(KC_DOT), KC_TRNS , KC_DEL,
+                                   KC_TRNS, KC_TRNS, KC_TAB,       KC_NO       , KC_TRNS    , KC_TRNS
     ),
 };
 

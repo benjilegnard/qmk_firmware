@@ -25,8 +25,7 @@ enum layers {
   _SYMBOL_2,
   _FUNCTIONS,
   _NUMBERS,
-  _ACCESS_1,
-  _ACCESS_2,
+  _EXTRAS,
 };
 
 #ifdef OLED_ENABLE
@@ -217,11 +216,8 @@ void render_logo_text(void) {
         case _NUMBERS:
             oled_write_P(PSTR("numbr"), false);
             break;
-        case _ACCESS_1:
-            oled_write_P(PSTR("raise"), false);
-            break;
-        case _ACCESS_2:
-            oled_write_P(PSTR("lower"), false);
+        case _EXTRAS:
+            oled_write_P(PSTR("extra"), false);
             break;
         default:
             oled_write_P(PSTR("sweep"), false);
@@ -273,11 +269,8 @@ void render_layer_state(void) {
         case _NUMBERS:
             oled_write_P(adjust_layer, false);
             break;
-        case _ACCESS_1:
-            oled_write_P(raise_layer, false);
-            break;
-        case _ACCESS_2:
-            oled_write_P(lower_layer, false);
+        case _EXTRAS:
+            oled_write_P(adjust_layer, false);
             break;
         default:
             oled_write_P(default_layer, false);

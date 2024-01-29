@@ -8,7 +8,7 @@
             "KC_A",         "KC_Z",         "KC_E",         "KC_R",         "KC_T",            "KC_Y",         "KC_U",            "KC_I",            "KC_O",           "KC_P",
             "LCTL_T(KC_Q)", "LT(5,KC_S)",   "LT(1,KC_D)",   "LT(3,KC_F)",   "KC_G",            "KC_H",         "LT(4,KC_J)",      "LT(2,KC_K)",      "LT(6,KC_L)",     "LCTL_T(KC_M)",
             "KC_W",         "LSFT_T(KC_X)", "RALT_T(KC_C)", "LGUI_T(KC_V)", "KC_B",            "KC_N",         "RGUI_T(KC_SCLN)", "RALT_T(KC_COMM)", "LSFT_T(KC_DOT)", "KC_SLSH",
-                                                            "KC_LGUI",      "LT(8,KC_SPC)",    "LT(7,KC_ENT)", "KC_RALT"
+                                                            "KC_LGUI",      "KC_SPC",          "LT(7,KC_ENT)", "KC_RALT"
         ],
         [
             "RGB_TOG", "RGB_MOD",  "RGB_HUI", "RGB_SAI", "RGB_VAI",    "RGB_SPI", "KC_BTN1", "KC_WH_U", "KC_BTN2", "KC_TRNS",
@@ -47,16 +47,10 @@
                                        "KC_TRNS", "KC_TRNS",      "KC_TRNS", "KC_TRNS"
         ],
         [
-            "KC_TRNS", "KC_TRNS", "KC_COLN", "KC_ESC",  "KC_TRNS",      "KC_TRNS", "KC_TRNS", "KC_TRNS",         "KC_DEL",         "KC_BSPC",
-            "KC_GRV",  "KC_PERC", "KC_SLSH", "KC_ENT",  "KC_TRNS",      "DF(1)",   "KC_LGUI", "KC_TRNS",         "KC_TRNS",        "KC_QUOT",
-            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_EXLM", "KC_TRNS",      "DF(0)",   "KC_TRNS", "RALT_T(KC_COMM)", "RCTL_T(KC_DOT)", "QK_BOOT",
+            "KC_TRNS", "KC_TRNS", "KC_COLN", "KC_ESC",  "KC_TRNS",      "KC_TRNS", "KC_TRNS", "KC_TRNS",         "KC_TRNS",        "KC_BSPC",
+            "KC_GRV",  "KC_PERC", "KC_SLSH", "KC_ENT",  "KC_TRNS",      "KC_LEFT", "KC_DOWN", "KC_UP",           "KC_RGHT",        "KC_QUOT",
+            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_EXLM", "KC_TRNS",      "DF(0)",   "DF(1)",   "RALT_T(KC_COMM)", "RCTL_T(KC_DOT)", "KC_DEL",
                                              "KC_TRNS", "KC_TAB",       "KC_NO",   "KC_TRNS"
-        ],
-        [
-            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_MS_L","KC_MS_D", "KC_MS_U", "KC_MS_R", "KC_WH_U",
-            "KC_BTN4", "KC_BTN3", "KC_BTN2", "KC_BTN1", "KC_TRNS",      "KC_LEFT","KC_DOWN","KC_UP","KC_RGHT","KC_ESC",
-            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_HOME","KC_PGDN","KC_PGUP", "KC_END", "KC_WH_D",
-                                             "KC_TRNS", "KC_NO",        "KC_TRNS", "KC_TRNS"
         ]
     ],
     "config": {
