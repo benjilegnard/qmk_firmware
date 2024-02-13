@@ -19,8 +19,8 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_DEFAULT] = LAYOUT_split_3x6_3(
 		KC_TAB , KC_A        , KC_Z                , KC_E           , KC_R              , KC_T        ,               KC_Y , KC_U              , KC_I                , KC_O             , KC_P        , KC_BSPC,
-		KC_LCTL, LCTL_T(KC_Q), LT(_FUNCTIONS, KC_S), LT(_MOUSE,KC_D), LT(_SYMBOL_1,KC_F), KC_G        ,               KC_H , LT(_SYMBOL_2,KC_J), LT(_NAVIGATION,KC_K), LT(_NUMBERS,KC_L), LCTL_T(KC_M), KC_QUOT,
-		KC_LSFT, KC_W        , LSFT_T(KC_X)        , RALT_T(KC_C)   , LGUI_T(KC_V)      , KC_B        ,               KC_N , RGUI_T(KC_SCLN)   , RALT_T(KC_COMM)     , LSFT_T(KC_DOT)   , KC_SLSH     , RSFT_T(KC_ESC),
+		KC_LCTL, LSFT_T(KC_Q), LT(_FUNCTIONS, KC_S), LT(_MOUSE,KC_D), LT(_SYMBOL_1,KC_F), KC_G        ,               KC_H , LT(_SYMBOL_2,KC_J), LT(_NAVIGATION,KC_K), LT(_NUMBERS,KC_L), RSFT_T(KC_M), KC_QUOT,
+		KC_LSFT, KC_W        , LCTL_T(KC_X)        , RALT_T(KC_C)   , LGUI_T(KC_V)      , KC_B        ,               KC_N , RGUI_T(KC_SCLN)   , RALT_T(KC_COMM)     , RCTL_T(KC_DOT)   , KC_SLSH     , RSFT_T(KC_ESC),
 				                                     KC_LGUI        , LT(_LOWER,KC_TAB) , KC_SPC      , LT(_EXTRAS,KC_ENT) , LT(_RAISE,KC_BSPC) , KC_RALT
 	),
 	[_LOWER] = LAYOUT_split_3x6_3(
