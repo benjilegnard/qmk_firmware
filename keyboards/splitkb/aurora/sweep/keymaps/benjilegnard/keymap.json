@@ -6,8 +6,8 @@
     "layers": [
         [
             "KC_A",         "KC_Z",         "KC_E",         "KC_R",          "KC_T",            "KC_Y",         "KC_U",            "KC_I",            "KC_O",           "KC_P",
-            "LCTL_T(KC_Q)", "LT(5,KC_S)",   "LT(1,KC_D)",   "LT(3,KC_F)",    "KC_G",            "KC_H",         "LT(4,KC_J)",      "LT(2,KC_K)",      "LT(6,KC_L)",     "LCTL_T(KC_M)",
-            "KC_W",         "LSFT_T(KC_X)", "RALT_T(KC_C)", "LGUI_T(KC_V)",  "KC_B",            "KC_N",         "RGUI_T(KC_SCLN)", "RALT_T(KC_COMM)", "LSFT_T(KC_DOT)", "KC_SLSH",
+            "LSFT_T(KC_Q)", "LT(5,KC_S)",   "LT(1,KC_D)",   "LT(3,KC_F)",    "KC_G",            "KC_H",         "LT(4,KC_J)",      "LT(2,KC_K)",      "LT(6,KC_L)",     "RSFT_T(KC_M)",
+            "KC_W",         "LCTL_T(KC_X)", "RALT_T(KC_C)", "LGUI_T(KC_V)",  "KC_B",            "KC_N",         "RGUI_T(KC_SCLN)", "RALT_T(KC_COMM)", "RCTL_T(KC_DOT)", "KC_SLSH",
                                                             "LGUI_T(KC_TAB)","KC_SPC",          "LT(7,KC_ENT)", "RALT_T(KC_BSPC)"
         ],
         [
