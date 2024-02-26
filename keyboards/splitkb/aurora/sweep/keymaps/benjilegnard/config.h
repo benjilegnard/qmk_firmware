@@ -22,6 +22,12 @@
 #define SPLIT_MODS_ENABLE
 #define SPLIT_OLED_ENABLE
 
+#define TAPPING_TERM 150
+
+#define PERMISSIVE_HOLD
+
+#define QUICK_TAP_TERM 120
+
 // Not yet available in `keymap.json` format
 #ifdef RGB_MATRIX_ENABLE
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED
