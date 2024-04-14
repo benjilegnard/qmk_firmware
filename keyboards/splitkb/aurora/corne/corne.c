@@ -28,6 +28,7 @@ enum layers {
   _SYMBOL_2,
   _FUNCTIONS,
   _NUMBERS,
+  _QWERTY,
   _EXTRAS,
 };
 
@@ -226,6 +227,9 @@ static void render_logo_text(void) {
             break;
         case _NUMBERS:
             oled_write_P(PSTR("numbr"), false);
+            break;
+        case _QWERTY:
+            oled_write_P(PSTR("qwert"), false);
             break;
         case _EXTRAS:
             oled_write_P(PSTR("extra"), false);
