@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	),
     [_EXTRAS] = LAYOUT_split_3x6_3(
         KC_TRNS, KC_TRNS, KC_TRNS, KC_COLN, KC_ESC,  KC_TRNS,      KC_TRNS     , KC_TRNS    , KC_TRNS    , KC_TRNS       , KC_TRNS , KC_BSPC,
-        KC_TRNS, KC_GRV,  KC_PERC, KC_SLSH, KC_ENT,  KC_TRNS,      KC_LEFT     , KC_DOWN    , KC_UP      , KC_RGHT       , KC_TRNS , KC_QUOT,
+        KC_GRV,  KC_TRNS, KC_PERC, KC_SLSH, KC_ENT,  KC_TRNS,      KC_LEFT     , KC_DOWN    , KC_UP      , KC_RGHT       , KC_TRNS , KC_QUOT,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_EXLM, KC_TRNS,      DF(_DEFAULT), DF(_MOUSE) , DF(_QWERTY), RCTL_T(KC_DOT), KC_TRNS , KC_DEL,
                                    KC_TRNS, KC_TRNS, KC_TAB,       KC_NO       , KC_TRNS    , KC_TRNS
     ),
