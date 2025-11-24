@@ -21,3 +21,4 @@
 # while we use the regular RGB underglow for testing
 RGB_MATRIX_ENABLE = no
 RGBLIGHT_ENABLE = yes
+BOOTLOADER = caterina
